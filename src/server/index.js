@@ -9,6 +9,7 @@ import { columns, initQueryObj } from './initialData';
 import { executeQuery } from './dbHelper';
 import { generateSelectQuery, generateSelectCountAllQuery } from './sqlHelper';
 import { processDataForSql, processDataForUI } from './util';
+import 'dotenv/config';
 
 async function handleRequest(req, res) {
   if (req.url === '/') homeRouteHandler(req, res);
@@ -105,7 +106,7 @@ function apiQueryRouteHandler(req, res) {
 
 const server = http.createServer(handleRequest);
 
-const port = 3000;
+const port = process.env.PORT || 3000;
 server.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
