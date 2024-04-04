@@ -1,4 +1,4 @@
-# Deployment - https://table-test-dwp9.onrender.com/
+# Deployment - https://table-test-production.up.railway.app
 # Тестовое задание web-программист (React.js)
 
 Нужно разработать таблицу в формате Single Page Application.
